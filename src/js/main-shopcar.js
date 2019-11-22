@@ -1,10 +1,16 @@
 require.config({
     paths:{
         jquery:'./jquery.min',
-        shopcar:'./lib/shopcar'
+        shopcar:'./lib/shopcar',
+        cookie:'./lib/cookie',
+        car:'./lib/car'
     },
     shim:{}
 });
-require(['jquery','shopcar'],function ($,shopcar) {
-    shopcar.crud();
+require(['jquery','shopcar','car'],function ($,shopcar,car) {
+    shopcar.crud(function(){
+        car.car()
+    });
+    
+
 })

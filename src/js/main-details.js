@@ -8,10 +8,10 @@ require.config({
 });
 require(['jquery','details'],function($,details){
     details.render(function(){
-        alert(1)
-        // $('button').on('click',function(){
-        //     details.cookie();
-        // })
+        // alert(1)
+        $('button').on('click',function(){
+            details.cookie();
+        })
         details.fdj();
     });
 })

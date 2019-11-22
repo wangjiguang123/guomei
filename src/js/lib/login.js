@@ -11,9 +11,9 @@ define(['jquery','md5'],function($,md5){
                         password:$.md5($('#password').val())
                     },
                     dataType:'json',
-                    success:function(respone){
-                        // console.log(respone.msg);
-                        let res=JSON.parse(respone);
+                    success:function(res){
+                        console.log(res.msg);
+                        // let res=JSON.parse(res);
                         if(res.msg==1){
                             alert('登录成功');
                             $('body').append(`

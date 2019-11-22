@@ -1,4 +1,4 @@
-define(['jquery'],function($){
+define(['jquery','lazyload'],function($,lazyload){
     return {
         product:function(){
             // console.log(1);
@@ -18,7 +18,7 @@ define(['jquery'],function($){
                         <li>
                             <a href="http://127.0.0.1:8080/1910/guomei.com/src/html/details.html?id=${elm.id}">
                             <div class="top" >
-                                <img src="../${pic[0].src}" alt="">
+                            <img class="lazy" data-original="../${pic[0].src}">
                             </div>
                             <div class="bottom">
                                 <p>${elm.title}</p>
@@ -28,7 +28,11 @@ define(['jquery'],function($){
                         </li> 
                         `)
                     });
+                    $(function() {
+                        $("img.lazy").lazyload({effect: "fadeIn"});
+                    });
                 }
+                
             })
         }
     }
