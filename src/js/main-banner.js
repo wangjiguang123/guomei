@@ -1,0 +1,11 @@
+require.config({
+    paths:{
+        jquery:'./jquery.min',
+        banner:'./lib/banner',
+        jqSuper:'./jquery.SuperSlide.2.1.3'
+    },
+    shim:{}
+});
+require(['jquery','banner'],function($,banner){
+    banner.banner();
+})

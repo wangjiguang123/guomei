@@ -1,0 +1,13 @@
+require.config({
+    paths:{
+        'jquery':'./jquery.min',
+        'md5':'./jquery.md5',
+        'register':'./lib/register'
+    },
+    shim:{
+        'md5':['jquery']
+    }
+});
+require(['jquery','register'],function($,register){
+    register.register('#submit');
+})

@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #888;
+}
+a:hover {
+  color: #f5004b;
+}
+#header {
+  width: 100%;
+  height: 120px;
+  border-bottom: 1px solid #dd00a7;
+}
+#header #logo {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 33px 0;
+}
+#header #logo > a {
+  display: inline-block;
+  width: 283px;
+  height: 56px;
+  background: url(../img/registerlogo.png) no-repeat;
+}
+#header #logo .remind {
+  float: right;
+  line-height: 56px;
+}
+#header #logo .remind a {
+  color: #f5004b;
+}
+#header #logo .remind a:hover {
+  text-decoration: underline;
+}
+#form {
+  width: 500px;
+  margin: 50px auto;
+  background: silver;
+}
+#form p {
+  margin: 20px 0;
+}
+#form p label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+}
+#form p label::after {
+  content: ':';
+}
+#form p .submit::after {
+  content: '';
+}
+#form p .number::-webkit-outer-spin-button,
+#form p .number::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
+#form p input {
+  border-radius: 5px;
+  border: 0;
+  width: 300px ;
+  height: 30px;
+}
+#footer {
+  margin-top: 50px;
+}
+#footer .statement {
+  width: 1170px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+}
+#footer .statement p {
+  line-height: 30px;
+  color: #888;
+}
+#footer .statement p > a {
+  display: inline-block;
+  font-size: 14px;
+  color: #666;
+  padding-left: 5px;
+}
+#footer .statement p > a:hover {
+  color: #f5004b;
+}
