@@ -47,6 +47,7 @@ define(['jquery','cookie'],function($,cookie){
                     callback&&callback( )
                 }       
             });
+            
             console.log(1)
         },
             
@@ -90,7 +91,7 @@ define(['jquery','cookie'],function($,cookie){
                 $('.movebox').css('display','none');
             })
         },
-        cookie:function () {
-        }
+        // cookie:function () {
+        // }
     }
 })
