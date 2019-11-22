@@ -68,6 +68,7 @@ a{
                 display: inline-block;
                 width:125px ;
                 height: 56px;
+                margin-right: 20px;
                 background: url(../img/logo.png) 0 0 no-repeat;
             }
         }
@@ -147,142 +148,168 @@ a{
         }
     }
 }
-// 楼梯特效
-.box{
-    margin: 0 auto;
-    width: 1200px;
-    position: relative;
+.product-bc{
+    height: 150px;
+    background: url(../img/product-bc.jpg) no-repeat;
+    background-size: 100% ;
 }
-.fl_l{
-    width: 64px;
-    float: left;
-    border: 1px solid #f4f4f4;
-    background: #fff;
-    position: fixed;
-}
-.fl_l li a{
-    border-bottom: 1px solid #eee;
-    text-align: center;
-    display: block;
-    color: #333;
-    font-size: 12px;
-    // line-height: 60px;
-}
-.fl_l li.active a{
-    background: #f60;
-    color: #fff;
-}
-.fl_r{
-    float: left;
+#nav{
     width: 100%;
-    >li{
-        width: 100%;
-        margin: 0 20px;
-        background: #fff;
-        display: block;
-        overflow: hidden;
-    }
-    .top{
-        margin-top: 20px;
-        width: 100%;
-        overflow: hidden;
-        h2{
-            float: left;
-            font-size: 20px;
-        }
-        ul{
-            float: right;
-            li{
-                float: left;
-                font-size: 14px;
-                cursor: pointer;
-                margin: 0 10px;
-                height: 30px;   
-                // line-height: 30px;
-                padding: 5px 10px;
-                &:hover{
-                    background-color: #719ef7;
-                }
-            }
-        }
-    }
-    .left{
-        float: left;
-    }
-    .right{
-        float: right;
-        // width: 990px;
+    height:30px ;
+    background-color: #be0e34;
+    .product-nav{
+        width: 1170px;
+        margin: 0 auto;
+        text-align: center;
         a{
-            float: left;
-            width: 198px;
-            height: 235px;
+            display: inline-block;
+            padding: 0 20px;
             text-align: center;
-            img{
-                width: 130px;
-                height: 130px;
-                margin: 20px 0 15px 34px;
-            }
-            p{
-                margin-bottom: 20px;
-                font-size: 12px;
-            }
+            color: #fff;
+            line-height: 30px;
+        }
+        a:hover{
+            background: #950222;
         }
     }
-
 }
-// 商品渲染
-#product{
-    margin-top: 20px;
+#main{
+    margin-top: 30px;
     .product-main{
         width: 1170px;
         margin: 0 auto;
-        >h2{
-            width: 100%;
-            padding-bottom: 10px;
-            border-bottom: 1px solid blue;
-        }
-        >ul{
-            width: 100%;
-            >li{
+        .left{
+            float: left;
+            position: relative;
+            // width: 500px;
+            // height: 600px;
+            .leftBox{
                 float: left;
-                width: 25%;
-                height: 250px;
-                >a{
-                   color: #000;
-                   font-size: 14px;
-                   text-align: center;
-                   .top{
-                        position: relative;
-                        width: 100%;
-                        height: 200px;
-                        img{
-                            width: 180px;
-                            height: 180px;
-                            position: absolute;
-                            left: 0;right: 0;
-                            top: 0;bottom: 0;
-                            margin:auto ;  
-                        }
-                   }
-                   .bottom{
-                       height: 50px;
-                       width: 100%;
-                       text-align: center;
-                       p{
-                            width:180px;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            margin: 0 auto;
-                            span{
-                                font-size: 16px;
-                            }
-                        }
-                   }
+                margin-right: 20px;
+                .bigbox{
+                    width: 360px;
+                    height: 360px;
+                    border: 1px solid #5e5e5e;
+                    margin-bottom: 30px;
+                    position: relative;
+                    >img{
+                        width: 300px;
+                        position: absolute;
+                        top: 0;bottom: 0;
+                        left: 0;right: 0;
+                        margin: auto;
+                    }
+                    .movebox {
+                        position: absolute;
+                        background-color: #5e5e5e;
+                        opacity: .3;
+                        top: 0;
+                        left: 0;
+                        cursor: move;
+                        border: 1px solid #ccc;
+                        display: none;
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                .smallbox{
+                    width: 360px;
+                    height: 70px;
+                    overflow: hidden;
+                    border: 1px solid #5e5e5e;
+                    a{
+                        display: inline-block;
+                        // width: 56px;
+                        // height: 56px;
+                        // padding: 0 15px;
+                        // display: block;
+                        vertical-align: top;
+                        padding: 1px;
+                    }
+                    a:hover{
+                        border: 1px solid #e3101e;
+                        padding: 0;
+                    }
+                }
+            }
+            .rightBox{
+                position: absolute;
+                left: 360px;
+                top: 0;
+                width: 460px;
+                height: 460px;
+                // display: none;
+                border: 1px solid #5e5e5e;
+                display: none;
+                background-color: #fff;
+                overflow: hidden;
+                >img{
+                    width: 600px;
+                    position: absolute;
+                    top: 0;bottom: 0;
+                    left: 0;right: 0;
+                    margin: auto;
+                }
+            }
+        }
+        .right{
+            float: left;
+            margin-left: 20px;
+            >h2{
+                width: 500px;
+                font-size: 16px;
+                line-height: 26px;
+                color: #5e5e5e;
+                font-weight: 600;
+                padding-top: 5px;
+            }
+            h3{
+                font-size: 14px;
+                margin-top: 15px;
+            }
+            >p{
+                color: #888;
+                font-size: 12px;
+                line-height: 20px;
+                margin-top: 50px;
+                >span{
+                    // display: block;
+                    font-family: Arial;
+                    font-size: 24px;
+                    color: #e3101e;
+                    font-weight: 700;
+                    margin-right: 10px;
+                }
+                span:first-of-type{
+                    font-size: 16px;
+                    font-style:normal ;
+                }
+                a{
+                    color: blue;
                 }
                 a:hover{
-                    color: #f5004b;
+                    text-decoration: underline;
                 }
+                >em{
+                    // display: block;
+                    // float: left;
+                    color: #000;
+                    font-size: 16px;
+                    margin-right: 2px;
+                    font-style: normal;
+                }
+                b{
+                    color: #000;
+                }
+            }
+            >button{
+                display: block;
+                width: 100px;
+                height: 50px;
+                background: #e3101e;
+                color: #FFF;
+                margin-left: 30px;
+                margin-top: 50px;
             }
         }
     }

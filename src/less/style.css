@@ -101,7 +101,7 @@ ul {
 	width: 5px;
 	height: 5px;
 	float: left;
-	background: url(../images/menu.png) -285px 0 no-repeat;
+	/* background: url(../img/menu.png) -285px 0 no-repeat; */
 	margin: 8px 4px 0 10px
 }
 .lunbo .category-option .sub-cat .sub-cat-links .sub-content {
@@ -147,7 +147,7 @@ ul {
 	width: 20px;
 	height: 20px;
 	margin: 8px 10px 0 15px;
-	background: url(../images/menu.png) no-repeat;
+	/* background: url(../img/menu.png) no-repeat; */
 	opacity: .65
 }
 .lunbo .category-option .cat-item .txt {

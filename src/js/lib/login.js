@@ -4,7 +4,7 @@ define(['jquery','md5'],function($,md5){
             console.log($.md5($('#password').val()));
             $('.btn').on('click',function(){
                 $.ajax({
-                    url:'http://localhost:8080/1910/guomei.com/lib/login.php',
+                    url:'http://127.0.0.1:8080/1910/guomei.com/lib/login.php',
                     type:'post',
                     data:{
                         username:$('#username').val(),
@@ -13,12 +13,12 @@ define(['jquery','md5'],function($,md5){
                     dataType:'json',
                     success:function(respone){
                         // console.log(respone.msg);
-                        if(respone.msg==1){
+                        let res=JSON.parse(respone);
+                        if(res.msg==1){
                             alert('登录成功');
-                            
                             $('body').append(`
                             <script>
-                                location.href='http://localhost:8080/1910/guomei.com/src/html'
+                                location.href='http://127.0.0.1:8080/1910/guomei.com/src/html'
                             </script>
                             `)
                         }else{

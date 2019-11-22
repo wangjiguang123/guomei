@@ -4,7 +4,7 @@ define(['jquery','md5'],function($,md5){
             // console.log($.md5($('#password').val()));
             $(selector).on('click',function(){
                 $.ajax({
-                    url:'http://localhost:8080/1910/guomei.com/lib/register.php',
+                    url:'http://127.0.0.1:8080/1910/guomei.com/lib/register.php',
                     type:'post',
                     data:{
                         username:$('#username').val(),
@@ -14,12 +14,14 @@ define(['jquery','md5'],function($,md5){
                     },
                     // dataType:'json',
                     success:function(res){
+                        let respone=JSON.parse(res);
+                        console.log(respone)
                         if(respone.msg==1){
                             alert('注册成功');
                             
                             $('body').append(`
                             <script>
-                                location.href='http://localhost:8080/1910/guomei.com/src/html'
+                                location.href='http://127.0.0.1:8080/1910/guomei.com/src/html'
                             </script>
                             `)
                         }else{
