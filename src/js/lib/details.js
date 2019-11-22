@@ -1,4 +1,4 @@
-define(['jquery'],function($){
+define(['jquery','cookie'],function($,cookie){
     return {
        
         render:function(callback){
@@ -11,10 +11,9 @@ define(['jquery'],function($){
                 },
                 dataType:'json',
                 success:function(res){
-                    // console.log(res)
+                    console.log(res.id.res.num)
                     let temp='';
                     let pic=JSON.parse(res.pic);
-                    // console.log(pic[1].src)
                     temp+=`
                     <div class="product-main clear">
                         <div class="left">
@@ -45,29 +44,26 @@ define(['jquery'],function($){
                     </div>
                     `
                     $('#main').html(temp);
-                    callback&&callback()
+                    callback&&callback( )
                 }       
             });
-            console.log(this)
+            console.log(1)
         },
+            
         fdj:function(){
-             console.log($('.smallbox>a>img'));
             $('.smallbox>a>img').hover(
                 function(){
                     $('.bigbox>img').get(0).src=$(this).get(0).src;
                     $('.rightBox>img').get(0).src=$(this).get(0).src; 
-                   
                 },function(){}
             );
             $('.bigbox').on('mouseover',
                 function(ev){
-                    // console.log(1);
                     $('.rightBox').css(
                         'display','block'
                     );
                     let top=ev.pageY-$('.bigbox').offset().top-($('.movebox').height()/2);
                     let left=ev.pageX-$('.bigbox').offset().left-($('.movebox').width()/2);
-                    // console.log(top,left)
                     let ratio=$('.rightBox>img').width()/$('.bigbox').width();
                     if(top<0){
                         top=0
@@ -93,9 +89,8 @@ define(['jquery'],function($){
                 $('.rightBox').css('display','none');
                 $('.movebox').css('display','none');
             })
-            console.log(this)
-            // return this;
         },
-        fn:function () { console.log(this) }
+        cookie:function () {
+        }
     }
 })

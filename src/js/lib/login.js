@@ -1,7 +1,7 @@
 define(['jquery','md5'],function($,md5){
     return {
         login:function(){
-            console.log($.md5($('#password').val()));
+            // console.log($.md5($('#password').val()));
             $('.btn').on('click',function(){
                 $.ajax({
                     url:'http://127.0.0.1:8080/1910/guomei.com/lib/login.php',
